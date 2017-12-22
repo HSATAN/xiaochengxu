@@ -31,7 +31,7 @@ if __name__ == '__main__':
         import platform
         if 'linux' in platform.system().lower():
 
-            logfile = '/home/log/twistserverlog/log'
+            logfile = '/home/log/xiaochengxu/log'
     except:
         pass
     formats = '[%(asctime)s] [%(filename)s L%(lineno)d] [%(levelname)s] %(message)s'
