@@ -41,8 +41,9 @@ class AuthWeiXin(BaseResource):
 class WXRunData(BaseResource):
 
     def real_POST(self, request):
-        echostr = request.args.get('nickName')[0]
-        logging.info("nickname %s" % echostr)
+        nickName = request.args.get('nickName')[0]
+        logging.info("nickname %s" % nickName)
+        print(nickName)
         return "success"
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
