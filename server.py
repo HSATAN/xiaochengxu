@@ -11,7 +11,7 @@ import json
 import logging
 import re
 
-from api.weixin.auth import AuthWeiXin
+from api.weixin.auth import AuthWeiXin, WXRunData
 
 back_data = "你好"
 
@@ -23,6 +23,7 @@ class Root(Resource):
         Resource.__init__(self)
 
         self.putChild("", AuthWeiXin(back_data))
+        self.putChild("rundata",WXRunData())
 
 
 if __name__ == '__main__':

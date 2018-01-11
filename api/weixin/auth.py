@@ -2,6 +2,8 @@
 from baseresource.greenresource import BaseResource
 from lxml import etree
 import random
+import logging
+
 
 class AuthWeiXin(BaseResource):
 
@@ -33,3 +35,14 @@ class AuthWeiXin(BaseResource):
         except Exception as e:
             print("微信验证失败")
         return "非法访问"
+
+class WXRunData(BaseResource):
+
+    def real_POST(self, request):
+        echostr = request.args.get('nickName')[0]
+        logging.info("nickname %s" % echostr)
+        return "success"
+    def real_GET(self, request):
+        echostr = request.args.get('nickName')[0]
+        logging.info("nickname %s" % echostr)
+        return "success"
