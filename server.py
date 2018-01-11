@@ -37,5 +37,5 @@ if __name__ == '__main__':
         pass
     formats = '[%(asctime)s] [%(filename)s L%(lineno)d] [%(levelname)s] %(message)s'
     logging.basicConfig(level=logging.INFO, format=formats, filename=logfile)
-    reactor.listenTCP(80, Site(Root()))
+    reactor.listenSSL(80, Site(Root()))
     reactor.run()
