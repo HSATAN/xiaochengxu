@@ -4,7 +4,7 @@ from __future__ import print_function
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-from twisted.internet import reactor
+from twisted.internet import reactor, ssl
 from twisted.web.resource import Resource
 from twisted.web.server import Site
 import json
@@ -37,5 +37,5 @@ if __name__ == '__main__':
         pass
     formats = '[%(asctime)s] [%(filename)s L%(lineno)d] [%(levelname)s] %(message)s'
     logging.basicConfig(level=logging.INFO, format=formats, filename=logfile)
-    reactor.listenSSL(80, Site(Root()))
+    reactor.listenSSL(80, Site(Root()), ssl.DefaultOpenSSLContextFactory())
     reactor.run()
