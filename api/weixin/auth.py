@@ -3,6 +3,8 @@ from baseresource.greenresource import BaseResource
 from lxml import etree
 import random
 import logging
+from __future__ import print_function
+
 
 
 class AuthWeiXin(BaseResource):
@@ -43,6 +45,7 @@ class WXRunData(BaseResource):
         logging.info("nickname %s" % echostr)
         return "success"
     def real_GET(self, request):
-        echostr = request.args.get('nickName')[0]
-        logging.info("nickname %s" % echostr)
+        nickName = request.args.get('nickName')[0]
+        logging.info("nickname %s" % nickName)
+        print(nickName)
         return "success"
