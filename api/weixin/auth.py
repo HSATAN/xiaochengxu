@@ -1,9 +1,9 @@
 # _*_ coding:utf-8 _*_
+from __future__ import print_function
 from baseresource.greenresource import BaseResource
 from lxml import etree
 import random
 import logging
-from __future__ import print_function
 
 
 
