@@ -46,11 +46,20 @@ class WXRunData(BaseResource):
     def real_POST(self, request):
         nickName = request.args.get('nickName')[0]
         rundata = request.args.get('rundata')[0]
-        sessionKey = request.args.get('sessionKey')[0]
+        code = request.args.get('sessionKey')[0]
+
         iv = request.args.get('iv')[0]
+        print('iv=%s' % iv)
+        url = 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
+              'js_code=%s&grant_type=authorization_code' % (appId, code)
+        res = requests.get(url)
+        print(res.content)
+        content = json.loads(res.content)
+        sessionKey = content['session_key']
+        print(sessionKey)
         pc = WXBizDataCrypt(appId, sessionKey)
-        print(pc.decrypt(rundata, iv))
         print("rundata = %s" % rundata)
+        print(pc.decrypt(rundata, iv))
         logging.info("nickname %s" % nickName)
         print(nickName)
         return "success"
