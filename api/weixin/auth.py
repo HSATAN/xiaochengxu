@@ -44,9 +44,13 @@ class WXRunData(BaseResource):
         nickName = request.args.get('nickName')[0]
         logging.info("nickname %s" % nickName)
         print(nickName)
+        rundata = request.args.get('rundata')[0]
+        print("rundata = %s" % rundata)
         return "success"
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
+        rundata = request.args.get('rundata')[0]
+        print("rundata = %s" % rundata)
         logging.info("nickname %s" % nickName)
         print(nickName)
         return "success"
