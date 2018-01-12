@@ -18,6 +18,7 @@ class WXBizDataCrypt:
         data = cipher.decrypt(encryptedData)
         data = '{"rundata":[{' + re.findall('"timestamp.+', data)[0]
         print data
+        data = data.rstrip()
         return json.loads(data)
 
         # if decrypted['watermark']['appid'] != self.appId:
