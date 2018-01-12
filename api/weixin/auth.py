@@ -62,7 +62,7 @@ class WXRunData(BaseResource):
         import requests
 
         url = 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
-              'code=%s&grant_type=authorization_code' % (appId, sessionKey)
+              'js_code=%s&grant_type=authorization_code' % (appId, sessionKey)
         res = requests.get(url)
         print(res.content)
         pc = WXBizDataCrypt(appId, sessionKey)
