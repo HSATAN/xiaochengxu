@@ -61,7 +61,7 @@ class WXRunData(BaseResource):
         print('iv=%s' % iv)
         import requests
 
-        url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea$' \
+        url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
               'code=%s&grant_type=authorization_code' % (appId, sessionKey)
         res = requests.get(url)
         print(res.content)
