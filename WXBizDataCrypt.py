@@ -2,7 +2,7 @@
 import base64
 import json
 from Crypto.Cipher import AES
-
+import re
 class WXBizDataCrypt:
     def __init__(self, appId, sessionKey):
         self.appId = appId
@@ -16,13 +16,14 @@ class WXBizDataCrypt:
 
         cipher = AES.new(sessionKey, AES.MODE_CBC, iv)
         data = cipher.decrypt(encryptedData)
-        print("data = %s" % data)
-        decrypted = json.loads(self._unpad(data))
+        data = '{"rundata":[{' + re.findall('"timestamp.+', data)[0]
+        print data
+        return json.loads(data)
 
-        if decrypted['watermark']['appid'] != self.appId:
-            raise Exception('Invalid Buffer')
-
-        return decrypted
+        # if decrypted['watermark']['appid'] != self.appId:
+        #     raise Exception('Invalid Buffer')
+        #
+        # return decrypted
 
     def _unpad(self, s):
         return s[:-ord(s[len(s)-1:])]
