@@ -4,7 +4,8 @@ from baseresource.greenresource import BaseResource
 from lxml import etree
 import random
 import logging
-
+from config.default import appId
+from WXBizDataCrypt import WXBizDataCrypt
 
 
 class AuthWeiXin(BaseResource):
@@ -42,14 +43,22 @@ class WXRunData(BaseResource):
 
     def real_POST(self, request):
         nickName = request.args.get('nickName')[0]
+        rundata = request.args.get('rundata')[0]
+        sessionKey = request.args.get('sessionKey')[0]
+        iv = request.args.get('iv')[0]
+        pc = WXBizDataCrypt(appId, sessionKey)
+        print(pc.decrypt(rundata, iv))
+        print("rundata = %s" % rundata)
         logging.info("nickname %s" % nickName)
         print(nickName)
-        rundata = request.args.get('rundata')[0]
-        print("rundata = %s" % rundata)
         return "success"
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
         rundata = request.args.get('rundata')[0]
+        sessionKey = request.args.get('sessionKey')[0]
+        iv = request.args.get('iv')[0]
+        pc = WXBizDataCrypt(appId, sessionKey)
+        print(pc.decrypt(rundata, iv))
         print("rundata = %s" % rundata)
         logging.info("nickname %s" % nickName)
         print(nickName)
