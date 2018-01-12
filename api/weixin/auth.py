@@ -58,6 +58,7 @@ class WXRunData(BaseResource):
         sessionKey = request.args.get('sessionKey')[0]
         print(sessionKey)
         iv = request.args.get('iv')[0]
+        print('iv=%s' % iv)
         pc = WXBizDataCrypt(appId, sessionKey)
         print("rundata = %s" % rundata)
         print(pc.decrypt(rundata, iv))
