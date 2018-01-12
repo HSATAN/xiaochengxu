@@ -19,7 +19,7 @@ class WXBizDataCrypt:
         data = '{"rundata":[{' + re.findall('"timestamp.+', data)[0]
         data = re.findall('\[.+\]', data)[0]
         print data
-        return data
+        return json.loads(data)
 
         # if decrypted['watermark']['appid'] != self.appId:
         #     raise Exception('Invalid Buffer')
