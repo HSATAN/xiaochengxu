@@ -17,9 +17,9 @@ class WXBizDataCrypt:
         cipher = AES.new(sessionKey, AES.MODE_CBC, iv)
         data = cipher.decrypt(encryptedData)
         data = '{"rundata":[{' + re.findall('"timestamp.+', data)[0]
+        data = re.findall('\[.+\]', data)[0]
         print data
-        data = data.rstrip()
-        return json.loads(data)
+        return data
 
         # if decrypted['watermark']['appid'] != self.appId:
         #     raise Exception('Invalid Buffer')
