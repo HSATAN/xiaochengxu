@@ -8,7 +8,7 @@ from config.default import appId
 from WXBizDataCrypt import WXBizDataCrypt
 import json
 import requests
-from common.function import timestamp_to_date
+from common.function import timestamp_to_date, get_day
 from database.mysql import MysqlDB
 
 
@@ -68,8 +68,9 @@ class WXRunData(BaseResource):
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
             logging.info("%s   %s " % (timestamp, step))
+            run_day = get_day(timestamp)
             MysqlDB.insert(
-                "insert into rundata(openid,step,runday,nickname) value ('%s',%s,20180327,'%s')" % (openid, step,nickName))
+                "insert into rundata(openid,step,runday,nickname) value ('%s',%s,'%s','%s')" % (openid, step,run_day, nickName))
 
         logging.info("nickname = %s" % nickName)
         return "success"
