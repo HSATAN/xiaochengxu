@@ -3,6 +3,7 @@ import base64
 import json
 from Crypto.Cipher import AES
 import re
+import logging
 class WXBizDataCrypt:
     def __init__(self, appId, sessionKey):
         self.appId = appId
@@ -16,6 +17,7 @@ class WXBizDataCrypt:
 
         cipher = AES.new(sessionKey, AES.MODE_CBC, iv)
         data = cipher.decrypt(encryptedData)
+        logging.info(data)
         data = '{"rundata":[{' + re.findall('"timestamp.+', data)[0]
         data = re.findall('\[.+\]', data)[0]
         print data
