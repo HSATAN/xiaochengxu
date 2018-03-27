@@ -51,19 +51,19 @@ class WXRunData(BaseResource):
         code = request.args.get('sessionKey')[0]
 
         iv = request.args.get('iv')[0]
-        print('iv=%s' % iv)
+        logging.info('iv=%s' % iv)
         url = 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
               'js_code=%s&grant_type=authorization_code' % (appId, code)
         res = requests.get(url)
-        print(res.content)
+        logging.info(res.content)
         content = json.loads(res.content)
         sessionKey = content['session_key']
-        print(sessionKey)
+        logging.info(sessionKey)
         pc = WXBizDataCrypt(appId, sessionKey)
-        print("rundata = %s" % rundata)
-        print(pc.decrypt(rundata, iv))
+        logging.info("rundata = %s" % rundata)
+        logging.info(pc.decrypt(rundata, iv))
         logging.info("nickname %s" % nickName)
-        print(nickName)
+        logging.info(nickName)
         return "success"
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
@@ -71,7 +71,7 @@ class WXRunData(BaseResource):
         code = request.args.get('sessionKey')[0]
 
         iv = request.args.get('iv')[0]
-        print('iv=%s' % iv)
+        logging.info('iv=%s' % iv)
         url = 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
               'js_code=%s&grant_type=authorization_code' % (appId, code)
         res = requests.get(url)
@@ -82,7 +82,7 @@ class WXRunData(BaseResource):
         for item in data:
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
-            print("%s   %s " %(timestamp, step))
+            logging.info("%s   %s " %(timestamp, step))
         logging.info("nickname %s" % nickName)
-        print(nickName)
+        logging.info(nickName)
         return "success"
