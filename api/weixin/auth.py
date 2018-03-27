@@ -70,7 +70,8 @@ class WXRunData(BaseResource):
             logging.info("%s   %s " % (timestamp, step))
             run_day = get_day(item['timestamp'])
             MysqlDB.insert(
-                "insert into rundata(openid,step,runday,nickname) value ('%s',%s,'%s','%s')" % (openid, step,run_day, nickName))
+                "insert into rundata(openid,step,runday,nickname) value"
+                " ('%s',%s,'%s','%s')  DUPLICATE key update step=%s" % (openid, step,run_day, nickName, step))
 
         logging.info("nickname = %s" % nickName)
         return "success"
