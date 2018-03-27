@@ -61,11 +61,11 @@ class WXRunData(BaseResource):
         logging.info(sessionKey)
         pc = WXBizDataCrypt(appId, sessionKey)
         logging.info("rundata = %s" % rundata)
-        for item in json.loads(rundata):
+        data = pc.decrypt(rundata, iv)
+        for item in data:
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
-            logging.info("%s   %s " %(timestamp, step))
-        logging.info("rundata = %s" % rundata)
+            logging.info("%s   %s " % (timestamp, step))
         logging.info(pc.decrypt(rundata, iv))
         logging.info("nickname %s" % nickName)
         logging.info(nickName)
