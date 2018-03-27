@@ -17,7 +17,7 @@ class WXBizDataCrypt:
 
         cipher = AES.new(sessionKey, AES.MODE_CBC, iv)
         data = cipher.decrypt(encryptedData)
-        logging.info(data)
+        # logging.info(data)
         data = '{"rundata":[{' + re.findall('"timestamp.+', data)[0]
         data = re.findall('\[.+\]', data)[0]
         print data
