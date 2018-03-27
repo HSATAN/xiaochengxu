@@ -60,7 +60,7 @@ class WXRunData(BaseResource):
         sessionKey = content['session_key']
         logging.info(sessionKey)
         pc = WXBizDataCrypt(appId, sessionKey)
-        for item in rundata:
+        for item in json.loads(rundata):
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
             logging.info("%s   %s " %(timestamp, step))
