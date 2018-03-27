@@ -68,7 +68,7 @@ class WXRunData(BaseResource):
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
             logging.info("%s   %s " % (timestamp, step))
-            run_day = get_day(timestamp)
+            run_day = get_day(item['timestamp'])
             MysqlDB.insert(
                 "insert into rundata(openid,step,runday,nickname) value ('%s',%s,'%s','%s')" % (openid, step,run_day, nickName))
 

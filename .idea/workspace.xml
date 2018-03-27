@@ -4,7 +4,6 @@
     <list default="true" id="8362e6e5-07e5-4953-b350-36530e38cd4b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/weixin/auth.py" afterPath="$PROJECT_DIR$/api/weixin/auth.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/function.py" afterPath="$PROJECT_DIR$/common/function.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +38,11 @@
       <file leaf-file-name="auth.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/weixin/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="72" column="118" lean-forward="false" selection-start-line="72" selection-start-column="118" selection-end-line="72" selection-end-column="118" />
+            <state relative-caret-position="430">
+              <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
-                <marker date="1522160523966" expanded="true" signature="2763:2837" ph="insert into rundata... " />
+                <marker date="1522160715723" expanded="true" signature="2771:2845" ph="insert into rundata... " />
               </folding>
             </state>
           </provider>
@@ -566,7 +565,7 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522160523966" expanded="true" signature="2763:2837" ph="insert into rundata... " />
+            <marker date="1522160715723" expanded="true" signature="2771:2845" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -639,7 +638,7 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522160523966" expanded="true" signature="2763:2837" ph="insert into rundata... " />
+            <marker date="1522160715723" expanded="true" signature="2771:2845" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -786,11 +785,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/weixin/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="72" column="118" lean-forward="false" selection-start-line="72" selection-start-column="118" selection-end-line="72" selection-end-column="118" />
+        <state relative-caret-position="430">
+          <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522160523966" expanded="true" signature="2763:2837" ph="insert into rundata... " />
+            <marker date="1522160715723" expanded="true" signature="2771:2845" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
