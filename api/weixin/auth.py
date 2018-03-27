@@ -60,7 +60,6 @@ class WXRunData(BaseResource):
         content = json.loads(res.content)
         sessionKey = content['session_key']
         openid = content['openid']
-        MysqlDB.insert("insert into rundata(openid,step,runday,nickname) value ('testopid5555',1000,20180327,'%s')" % nickName)
         logging.info(sessionKey)
         pc = WXBizDataCrypt(appId, sessionKey)
         logging.info("rundata = %s" % rundata)
@@ -69,6 +68,9 @@ class WXRunData(BaseResource):
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
             logging.info("%s   %s " % (timestamp, step))
+            MysqlDB.insert(
+                "insert into rundata(openid,step,runday,nickname) value ('%s',%s,20180327,'%s')" % (openid, step,nickName))
+
         logging.info("nickname = %s" % nickName)
         return "success"
     def real_GET(self, request):
