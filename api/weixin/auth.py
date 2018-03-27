@@ -9,6 +9,7 @@ from WXBizDataCrypt import WXBizDataCrypt
 import json
 import requests
 from common.function import timestamp_to_date
+from database.mysql import MysqlDB
 
 
 class AuthWeiXin(BaseResource):
@@ -58,6 +59,8 @@ class WXRunData(BaseResource):
         logging.info(res.content)
         content = json.loads(res.content)
         sessionKey = content['session_key']
+        openid = content['openid']
+        MysqlDB.insert("insert into rundata(openid,step,runday,nickname) value ('testopid5555',1000,20180327,'%s')" % nickName)
         logging.info(sessionKey)
         pc = WXBizDataCrypt(appId, sessionKey)
         logging.info("rundata = %s" % rundata)
@@ -66,8 +69,7 @@ class WXRunData(BaseResource):
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
             logging.info("%s   %s " % (timestamp, step))
-        logging.info("nickname %s" % nickName)
-        logging.info(nickName)
+        logging.info("nickname = %s" % nickName)
         return "success"
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
