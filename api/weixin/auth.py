@@ -39,6 +39,7 @@ class AuthWeiXin(BaseResource):
             echostr = request.args.get('echostr')[0]
             return echostr
         except Exception as e:
+            logging.info("访问错误")
             print("微信验证失败")
         return "非法访问"
 
