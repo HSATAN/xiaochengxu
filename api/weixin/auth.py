@@ -66,7 +66,6 @@ class WXRunData(BaseResource):
             timestamp = timestamp_to_date(item['timestamp'])
             step = item['step']
             logging.info("%s   %s " % (timestamp, step))
-        logging.info(pc.decrypt(rundata, iv))
         logging.info("nickname %s" % nickName)
         logging.info(nickName)
         return "success"
