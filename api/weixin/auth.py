@@ -49,7 +49,7 @@ class WXRunData(BaseResource):
     def real_POST(self, request):
         nickName = request.args.get('nickName')[0]
         rundata = request.args.get('rundata')[0]
-        code = request.args.get('sessionKey')[0]
+        code = request.args.get('code')[0]
 
         iv = request.args.get('iv')[0]
         logging.info('iv=%s' % iv)
