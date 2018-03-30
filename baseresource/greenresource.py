@@ -1,7 +1,7 @@
 # _*_ coding:utf-8 _*_
 from __future__ import print_function
 from twisted.web.resource import Resource
-import json
+import json, ujson
 
 
 class BaseResource(Resource):
@@ -15,7 +15,7 @@ class BaseResource(Resource):
         pass
 
     def render_POST(self, request):
-        return self.real_POST(request)
+        return ujson.dumps(self.real_POST(request))
 
     def real_HEAD(self, request):
         pass
