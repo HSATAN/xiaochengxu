@@ -10,7 +10,7 @@ from twisted.web.server import Site
 import json
 import logging
 import re
-
+from api.weixin.userinfo import UserInfo
 from api.weixin.auth import AuthWeiXin, WXRunData
 
 back_data = "你好"
@@ -24,6 +24,7 @@ class Root(Resource):
 
         self.putChild("", AuthWeiXin(back_data))
         self.putChild("rundata",WXRunData())
+        self.putChild("userinfo", UserInfo())
 
 
 

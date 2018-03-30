@@ -8,3 +8,4 @@ MYSQL_PORT = 3306
 MYSQL_PASSWORD = 'hkj520XLR.'
 MYSQL_USER = 'root'
 
+RUN_TABLE = 'rundata'
