@@ -19,5 +19,5 @@ class UserInfo(BaseResource):
     def real_POST(self, request):
         openid = request.args.get('openid')[0]
         logging.info("select * from  %s openid='%s' and day=20180329" % (RUN_TABLE, openid))
-        data = MysqlDB.run_query("select * from  %s openid='%s' and day=20180329" % (RUN_TABLE, openid))
+        data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=20180329" % (RUN_TABLE, openid))
         return data
