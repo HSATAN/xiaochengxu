@@ -77,7 +77,7 @@ class WXRunData(BaseResource):
                 " ('%s',%s,'%s','%s') on DUPLICATE key update step=%s" % (openid, step,run_day, nickName, step))
 
         logging.info("nickname = %s" % nickName)
-        resp = ujson.dumps({'openid': openid, 'code': 0})
+        resp = {'openid': openid, 'code': 0}
         return  resp
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
