@@ -10,6 +10,7 @@ import json
 import requests
 from common.function import timestamp_to_date, get_day
 from database.mysql import MysqlDB
+import ujson
 
 
 class AuthWeiXin(BaseResource):
@@ -76,7 +77,8 @@ class WXRunData(BaseResource):
                 " ('%s',%s,'%s','%s') on DUPLICATE key update step=%s" % (openid, step,run_day, nickName, step))
 
         logging.info("nickname = %s" % nickName)
-        return {'openid': openid, 'code': 0}
+        resp = ujson.dumps({'openid': openid, 'code': 0})
+        return  resp
     def real_GET(self, request):
         nickName = request.args.get('nickName')[0]
         rundata = request.args.get('rundata')[0]
