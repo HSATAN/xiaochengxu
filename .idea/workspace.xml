@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8362e6e5-07e5-4953-b350-36530e38cd4b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/weixin/userinfo.py" afterPath="$PROJECT_DIR$/api/weixin/userinfo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/weixin/auth.py" afterPath="$PROJECT_DIR$/api/weixin/auth.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userinfo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userinfo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/weixin/userinfo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="254">
@@ -64,16 +64,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="auth.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/weixin/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="48" />
+            <state relative-caret-position="356">
+              <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
-                <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-                <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-                <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
+                <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+                <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+                <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
               </folding>
             </state>
           </provider>
@@ -122,10 +122,10 @@
         <option value="$PROJECT_DIR$/common/function.py" />
         <option value="$PROJECT_DIR$/config/default.py" />
         <option value="$PROJECT_DIR$/baseresource/greenresource.py" />
-        <option value="$PROJECT_DIR$/api/weixin/auth.py" />
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/api/weixin/rankdata.py" />
         <option value="$PROJECT_DIR$/api/weixin/userinfo.py" />
+        <option value="$PROJECT_DIR$/api/weixin/auth.py" />
       </list>
     </option>
   </component>
@@ -615,9 +615,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -682,9 +682,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -749,9 +749,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -816,9 +816,9 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -886,9 +886,9 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>
@@ -1012,19 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/weixin/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="48" />
-          <folding>
-            <element signature="e#23#60#0" expanded="true" />
-            <marker date="1522386871390" expanded="true" signature="2759:2882" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3066" ph="insert into rundata... " />
-            <marker date="1522386871390" expanded="true" signature="2973:3096" ph="insert into rundata... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1056,6 +1043,19 @@
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <marker date="1522501783035" expanded="true" signature="597:644" ph="select * fro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/weixin/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+            <marker date="1522502233360" expanded="true" signature="2840:2963" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3147" ph="insert into rundata... " />
+            <marker date="1522502233360" expanded="true" signature="3054:3177" ph="insert into rundata... " />
           </folding>
         </state>
       </provider>

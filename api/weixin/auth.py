@@ -51,7 +51,8 @@ class WXRunData(BaseResource):
         nickName = request.args.get('nickName')[0]
         rundata = request.args.get('rundata')[0]
         code = request.args.get('code')[0]
-
+        userinfo = request.args.get('userinfo')[0]
+        logging.info(userinfo)
         iv = request.args.get('iv')[0]
         logging.info('iv=%s' % iv)
         url = 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
