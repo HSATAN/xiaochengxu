@@ -21,6 +21,6 @@ class RankData(BaseResource):
         openid = request.args.get('openid')[0]
         day = get_day(time.time())
         logging.info("select * from  %s openid='%s'" % (RUN_TABLE, openid))
-        data = MysqlDB.run_query("select * from  %s where openid='%s' limit  30" % (RUN_TABLE, openid))
+        data = MysqlDB.run_query("select * from  %s where openid='%s' ORDER BY runday DESC limit  30" % (RUN_TABLE, openid))
 
         return data
