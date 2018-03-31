@@ -20,7 +20,7 @@ class RankData(BaseResource):
     def real_POST(self, request):
         openid = request.args.get('openid')[0]
         day = get_day(time.time())
-        logging.info("select * from  %s openid='%s'" % (RUN_TABLE, openid))
+        logging.info("select * from  %s where openid='%s' and runday=%s ORDER BY step DESC" % (RUN_TABLE, openid, day))
         data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=%s ORDER BY step DESC" % (RUN_TABLE, openid, day))
 
         return data
