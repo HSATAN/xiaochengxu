@@ -20,4 +20,6 @@ class UserInfo(BaseResource):
         openid = request.args.get('openid')[0]
         logging.info("select * from  %s openid='%s' and day=20180329" % (RUN_TABLE, openid))
         data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=20180329" % (RUN_TABLE, openid))
-        return data
+        if not data:
+            return {'code': 1, 'data': None}
+        return {'code': 0, 'data': data}
