@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8362e6e5-07e5-4953-b350-36530e38cd4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/weixin/rankdata.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/weixin/rankdata.py" afterPath="$PROJECT_DIR$/api/weixin/rankdata.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,12 +52,13 @@
       <file leaf-file-name="rankdata.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/weixin/rankdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="330">
+              <caret line="23" column="79" lean-forward="false" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
-                <marker date="1522496903628" expanded="true" signature="591:629" ph="select * fro... missing_value" />
-                <marker date="1522496903628" expanded="true" signature="695:742" ph="select * fro... missing_value" />
+                <marker date="1522497174209" expanded="true" signature="591:620" ph="select * fro... missing_value" />
+                <marker date="1522497174209" expanded="true" signature="679:714" ph="select * fro... missing_value" />
+                <marker date="1522497174209" expanded="true" signature="679:724" ph="select * fro... missing_value" />
               </folding>
             </state>
           </provider>
@@ -1050,12 +1050,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/weixin/rankdata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="330">
+          <caret line="23" column="79" lean-forward="false" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
-            <marker date="1522496903628" expanded="true" signature="591:629" ph="select * fro... missing_value" />
-            <marker date="1522496903628" expanded="true" signature="695:742" ph="select * fro... missing_value" />
+            <marker date="1522497174209" expanded="true" signature="591:620" ph="select * fro... missing_value" />
+            <marker date="1522497174209" expanded="true" signature="679:714" ph="select * fro... missing_value" />
+            <marker date="1522497174209" expanded="true" signature="679:724" ph="select * fro... missing_value" />
           </folding>
         </state>
       </provider>
