@@ -39,11 +39,11 @@
         <entry file="file://$PROJECT_DIR$/api/weixin/userinfo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="407">
-              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
-                <marker date="1522494434553" expanded="true" signature="544:590" ph="select * fro... missing_value" />
-                <marker date="1522494434553" expanded="true" signature="649:704" ph="select * fro... " />
+                <marker date="1522494540912" expanded="true" signature="544:590" ph="select * fro... missing_value" />
+                <marker date="1522494540912" expanded="true" signature="649:704" ph="select * fro... " />
               </folding>
             </state>
           </provider>
@@ -630,8 +630,8 @@
           <caret line="21" column="77" lean-forward="false" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
-            <marker date="1522494434553" expanded="true" signature="544:590" ph="select * fro... missing_value" />
-            <marker date="1522494434553" expanded="true" signature="649:704" ph="select * fro... " />
+            <marker date="1522494540912" expanded="true" signature="544:590" ph="select * fro... missing_value" />
+            <marker date="1522494540912" expanded="true" signature="649:704" ph="select * fro... " />
           </folding>
         </state>
       </provider>
@@ -1065,11 +1065,11 @@
     <entry file="file://$PROJECT_DIR$/api/weixin/userinfo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
-            <marker date="1522494434553" expanded="true" signature="544:590" ph="select * fro... missing_value" />
-            <marker date="1522494434553" expanded="true" signature="649:704" ph="select * fro... " />
+            <marker date="1522494540912" expanded="true" signature="544:590" ph="select * fro... missing_value" />
+            <marker date="1522494540912" expanded="true" signature="649:704" ph="select * fro... " />
           </folding>
         </state>
       </provider>

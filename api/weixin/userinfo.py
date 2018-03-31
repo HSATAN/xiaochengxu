@@ -22,4 +22,4 @@ class UserInfo(BaseResource):
         data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=20180329" % (RUN_TABLE, openid))
         if not data:
             return {'code': 1, 'data': None}
-        return {'code': 0, 'data': data}
+        return {'code': 0, 'data': data[0]}
