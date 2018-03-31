@@ -12,6 +12,7 @@ import logging
 import re
 from api.weixin.userinfo import UserInfo
 from api.weixin.auth import AuthWeiXin, WXRunData
+from api.weixin.rankdata import RankData
 
 back_data = "你好"
 
@@ -25,6 +26,7 @@ class Root(Resource):
         self.putChild("", AuthWeiXin(back_data))
         self.putChild("rundata",WXRunData())
         self.putChild("userinfo", UserInfo())
+        self.putChild("rankdata", RankData())
 
 
 
