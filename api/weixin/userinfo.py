@@ -12,13 +12,13 @@ from config.default import RUN_TABLE
 import requests
 from common.function import timestamp_to_date, get_day
 from database.mysql import MysqlDB
-import ujson
+import ujson, time
 
 class UserInfo(BaseResource):
 
     def real_POST(self, request):
         openid = request.args.get('openid')[0]
-        logging.info("select * from  %s openid='%s' and day=20180329" % (RUN_TABLE, openid))
-        data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=20180329" % (RUN_TABLE, openid))
+        day = get_day(time.time())
+        data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=%s" % (RUN_TABLE, openid))
 
         return data[0]
