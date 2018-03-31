@@ -21,6 +21,6 @@ class RankData(BaseResource):
         openid = request.args.get('openid')[0]
         day = get_day(time.time())
         logging.info("select * from  %s where openid='%s' and runday=%s ORDER BY step DESC" % (RUN_TABLE, openid, day))
-        data = MysqlDB.run_query("select * from  %s where openid='%s' and runday=%s ORDER BY step DESC" % (RUN_TABLE, openid, day))
+        data = MysqlDB.run_query("select * from  %s where  runday=%s ORDER BY step DESC" % (RUN_TABLE, day))
 
         return data
