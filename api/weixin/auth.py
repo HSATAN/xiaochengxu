@@ -51,8 +51,8 @@ class WXRunData(BaseResource):
         nickName = request.args.get('nickName')[0]
         rundata = request.args.get('rundata')[0]
         code = request.args.get('code')[0]
-        userinfo = request.args.get('userinfo')[0]
-        logging.info(userinfo)
+        avatarUrl = request.args.get('avatarUrl')[0]
+        logging.info(avatarUrl)
         iv = request.args.get('iv')[0]
         logging.info('iv=%s' % iv)
         url = 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=ddf03c948cfe2610dd8d1ae125b212ea&' \
@@ -75,7 +75,7 @@ class WXRunData(BaseResource):
                 " ('%s',%s,'%s','%s') on DUPLICATE key update step=%s" % (openid, step,run_day, nickName, step))
             MysqlDB.insert(
                 "insert into rundata(openid,step,runday,nickname) value"
-                " ('%s',%s,'%s','%s') on DUPLICATE key update step=%s" % (openid, step,run_day, nickName, step))
+                " ('%s',%s,'%s','%s') on DUPLICATE key update step=%s  , avatarUrl='%s'" % (openid, step,run_day, nickName, step, avatarUrl))
 
         logging.info("nickname = %s" % nickName)
         resp = {'openid': openid, 'code': 0}
