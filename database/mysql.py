@@ -21,8 +21,15 @@ class MysqlDB(object):
             cls.commit()
         except Exception as e:
             logging.error("insert error: %s" % e)
-            cls.rollback()
-            cls.commit()
+            cls.reconn()
+            # cls.rollback()
+            # cls.commit()
+    @classmethod
+    def reconn(cls):
+        try:
+            cls.cursor = cls.conn.cursor()
+        except Exception as e:
+            logging.error("reconn error %s" %e)
 
     @classmethod
     def close(cls):
